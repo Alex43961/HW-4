@@ -138,8 +138,36 @@
 //	console.log("It's leap year");	
 //} else {
 //	console.log("It's not leap year");
-	
+
 //}
+
+//! 6
+
+
+let isRunning: boolean = true
+while (isRunning) {
+	const userCurrency: number | null = +prompt("How currency you want to get ?: 1)EUR 2)UAH 3)AZN")
+	let userAmount: number | null
+	
+	switch (userCurrency) {
+		case 1:
+			userAmount = +prompt("How many dollars you want to exchange ?")
+			isRunning = alert("You get " + userAmount / 1.08 + " EUR")
+			break;
+		case 2:
+			userAmount = +prompt("How many dollars you want to exchange ?")
+			isRunning = alert("You get " + userAmount / 0.025 + " UAH")
+			break;
+		case 3:
+			userAmount = +prompt("How many dollars you want to exchange ?")
+			isRunning = alert("You get " + userAmount / 0.59 + " AZN")
+			break
+		default:
+			alert("Something went wrong. Try again.")
+			break
+
+	}
+}
 
 
 
